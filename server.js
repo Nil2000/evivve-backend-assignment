@@ -9,10 +9,6 @@ const io = socketIo(server);
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
-
-app.get("/room", (req, res) => {
-  res.sendFile(__dirname + "/room.html");
-});
 io.on("connection", (socket) => {
   console.log("A user connected");
 
